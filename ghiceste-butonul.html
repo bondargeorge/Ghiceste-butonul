@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="George Bondar">
+	<meta name="description" content="The aim of this web page is to provide
+	 the user with an interactive game where he/ sher has to guess which button is the winning one.">
+
+	 <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+	<title>Guess the button</title>
+</head>
+<body>
+	<div class="container">
+	  <div class="card text-center">
+       <div class="card-header">
+	    First mini-project
+	  </div>
+	  <div class="card-body">
+	    <h5 class="card-title">Guess the button</h5>
+	    <p class="card-text">Description: In this application there are <em>3 buttons</em>. One of them is the <strong>winning</strong> one.</p>
+	    <span style="font-size: 32px; margin: 21px 0; display: block;">Can you guess which one?</span>
+		<div class="d-grid gap-2">
+		  <button class="btn btn-secondary" type="button" id="0" onclick="guessButton(this.id)">Button 0</button>
+		  <button class="btn btn-secondary" type="button" id="1" onclick="guessButton(this.id)">Button 1</button>
+		  <button class="btn btn-secondary" type="button" id="2" onclick="guessButton(this.id)">Button 2</button>
+		</div>
+	  </div>
+	</div>
+	
+	<!-- Option: Bootstrap Bundle with Popper -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+
+	<script type="text/javascript">
+		function guessButton(idBtn) {
+    	  var random = Math.floor(Math.random() * 3);
+    	  if (idBtn == random) {
+    	  	alert("Congratulations! You guessed the correct button!");
+    	  } else {
+    	  	alert("Unfortunately that is NOT the correct button. The correct button is " + random + ". Better luck next time!");
+    	  }
+    	}
+	</script>
+</body>
+</html>
